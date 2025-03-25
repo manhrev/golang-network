@@ -2,10 +2,11 @@ package main
 
 import (
 	"golang-network/state"
+	"golang-network/udp-server/server"
 )
 
 func main() {
-	server := NewServer("localhost:1200")
+	server := server.NewServer("localhost:1200", initState())
 	server.Serve()
 
 }
